@@ -8,8 +8,8 @@ VAR
         s,k :intiger := 0 ; /*deux variable local , k pour multiplication deux case de tableau 
                                 et s pour laddition de resultat de k */
     BEGIN
-        FOR i FROM 0 TO v1[length-1] STEP 1  DO
-            FOR x FROM 0 TO v2[length-1] STEP 1  DO
+        FOR i FROM 0 TO v1.length-1 STEP 1  DO
+            FOR x FROM 0 TO v2.length-1 STEP 1  DO
                 k =v1[i]+v2[x];
                 s=s+k;
             END_FOR
@@ -18,11 +18,11 @@ VAR
     END
                       /* fontion pour calcule le produit scalair*/
 BEGIN
-    FOR i FROM 0 TO v1[length-1] STEP 1  DO
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
         read (v1[i]);
     END_FOR
         /*remplissage de 1er tableau*/
-    FOR x FROM 0 TO v2[length-1] STEP 1  DO
+    FOR x FROM 0 TO v2.length-1 STEP 1  DO
         read (v2[x]);
     END_FOR   
         /*remplissage de 2emme tableau*/
