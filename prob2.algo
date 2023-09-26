@@ -1,0 +1,39 @@
+ALGORITHM dot product
+VAR
+    v1,v2 : ARRAY_OF INTEGER[3]; /* de tableau*/
+    x,i : INTEGER; /* curseur*/
+    ps :INTEGER :=0; /* produit scalair*/
+    FUNCTION dot_product do(v1,v2: ARRAY_OF INTEGER[3]  i,x : INTEGER) : intiger
+    VAR
+        s,k :intiger := 0 ; /*deux variable local , k pour multiplication deux case de tableau 
+                                et s pour laddition de resultat de k */
+    BEGIN
+        FOR i FROM 0 TO v1[length-1] STEP 1  DO
+            FOR x FROM 0 TO v2[length-1] STEP 1  DO
+                k =v1[i]+v2[x];
+                s=s+k;
+            END_FOR
+        END_FOR
+        RETURN s ;
+    END
+                      /* fontion pour calcule le produit scalair*/
+BEGIN
+    FOR i FROM 0 TO v1[length-1] STEP 1  DO
+        read (v1[i]);
+    END_FOR
+        /*remplissage de 1er tableau*/
+    FOR x FROM 0 TO v2[length-1] STEP 1  DO
+        read (v2[x]);
+    END_FOR   
+        /*remplissage de 2emme tableau*/
+    ps := dot_product(v1,v2 : ARRAY_OF intiger[3], i,x: intiger): intiger;
+        /*ps est le resultat de produit scalair*/
+     IF (ps=0) THEN
+        write ("tow vectors are orthogonal");
+     else
+        write("tow vectors are not orthogonal");
+        /* boucle if pour test les vectos sont orthogonal ou nn*/ 
+
+     END_IF
+
+END
